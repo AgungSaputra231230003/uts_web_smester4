@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@include('partials.header')
 @section('content')
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center mb-6">

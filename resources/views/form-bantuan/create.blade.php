@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@include('partials.header')
+
 @section('content')
     <div class="container mx-auto px-4">
         <h1 class="text-2xl font-bold mb-6">Form Bantuan Sekolah</h1>
@@ -9,10 +11,26 @@
 
             <div class="mb-4">
                 <label for="school_name" class="block text-gray-700 font-medium mb-2">Pilih Sekolah</label>
-                <input type="text" name="school_name" id="school_name"
+                <select name="school_name" id="school_name"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <option value="">Pilih Sekolah</option>
+                    @php
+                        $sekolahs = [
+                            ['nama' => 'SD Muhammadiyah', 'lokasi' => 'Pontianak', 'kebutuhan' => 'Buku & Seragam'],
+                            ['nama' => 'SMP Mandiri', 'lokasi' => 'Bandung', 'kebutuhan' => 'Laptop'],
+                            ['nama' => 'SMK 1 Ketapang', 'lokasi' => 'Ketapang', 'kebutuhan' => 'Peralatan Bengkel'],
+                        ];
+                    @endphp
+
+                    @foreach ($sekolahs as $sekolah)
+                        <option value="{{ $sekolah['nama'] }}">
+                            {{ $sekolah['nama'] }} - {{ $sekolah['lokasi'] }} ({{ $sekolah['kebutuhan'] }})
+                        </option>
+                    @endforeach
+                </select>
             </div>
 
+            <!-- Bagian form lainnya tetap sama -->
             <div class="mb-4">
                 <label for="assistance_type" class="block text-gray-700 font-medium mb-2">Jenis Bantuan</label>
                 <select name="assistance_type" id="assistance_type"
@@ -45,7 +63,8 @@
             </div>
 
             <div class="flex justify-end">
-                <a href="/form-bantuan"><button type="button" class="bg-blue-600 rounded-md mr-2 p-2 text-white hover:bg-blue-800">Kembali</button></a>
+                <a href="/form-bantuan"><button type="button"
+                        class="bg-blue-600 rounded-md mr-2 p-2 text-white hover:bg-blue-800">Kembali</button></a>
                 <button type="submit"
                     class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                     Simpan Data
