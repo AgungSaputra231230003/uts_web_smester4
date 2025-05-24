@@ -2,7 +2,7 @@
 
 @include('partials.header')
 @section('content')
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 animate-opacity">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-2xl font-bold">Daftar Bantuan Sekolah</h1>
             <a href="{{ route('form-bantuan.create') }}"

@@ -3,7 +3,7 @@
 @include('partials.header')
 
 @section('content')
-    <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="max-w-6xl mx-auto px-4 py-8 animate-opacity">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Daftar Sekolah yang Membutuhkan Bantuan</h2>
 
         <div class="overflow-x-auto">

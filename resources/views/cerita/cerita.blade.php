@@ -3,7 +3,7 @@
 @include('partials.header')
 
 @section('content')
-    <div class="max-w-5xl mx-auto px-6 py-12">
+    <div class="max-w-5xl mx-auto px-6 py-12 animate-opacity">
         <h1 class="text-4xl font-bold mb-10 text-center text-blue-700">Cerita & Dampak</h1>
 
         <div class="grid md:grid-cols-2 gap-8">

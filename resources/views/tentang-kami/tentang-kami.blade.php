@@ -4,9 +4,9 @@
 
 @section('content')
 
-    <body class="bg-gray-100 text-gray-800">
+    <body class="bg-gray-100 text-gray-800 ">
         <!-- Header 2-->
-        <header class="bg-blue-700 text-white py-6 shadow-2xl shadow-black rounded-2xl">
+        <header class="bg-blue-700 text-white py-6 shadow-2xl shadow-black rounded-2xl animate-opacity">
             <div class="max-w-4xl mx-auto px-4">
                 <h1 class="text-3xl font-bold">Bantu Sekolah Butuh Bantuan</h1>
                 <p class="text-sm mt-2">Memberdayakan Pendidikan, Membangun Masa Depan</p>
@@ -14,7 +14,7 @@
         </header>
 
         <!-- Konten -->
-        <main class="max-w-4xl mx-auto px-4 py-10">
+        <main class="max-w-4xl mx-auto px-4 py-10 animate-opacity">
             <div class="bg-white rounded shadow p-6">
                 <h2 class="text-xl font-semibold mb-4 text-teal-700">Tentang Kami</h2>
                 <p class="mb-4">
